@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grocery.css">
+</head>
+<body>
+    <div id="app">
+        
+		<div class="container">
+            <header>
+                <h1>Grocery List</h1>
+            </header>
+            <div class="content">
+				<ul id="list">
+					<li style="display: none;">
+                        <div class="checkBox">
+                            <div class="round"></div>
+                            <div class="checkMark"></div>
+                        </div>
+                        <div>
+                            <h3>
+                                Comida X
+                            </h3>
+                            <p>
+                                3 unidades
+                            </p>
+                        </div>
+					</li>
+				
+				</ul>
+            </div>
+            <form 
+                onsubmit="addItem(event)"
+                class="addItem"
+                style="display: flex; align-items: center; justify-content: space-between;">
+
+                <input name="newItem" placeholder="Add Item" type="text">
+                <button type="submit"><img src="add.svg" alt="Add item"></button>
+            </form>
+		</div>
+	</div>
+
+	<script src="grocery.js">
+	</script>
+</body>
+</html>

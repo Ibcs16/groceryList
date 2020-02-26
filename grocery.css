@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  background: #252526;
+  -webkit-font-smoothing: antialiased !important;
+  color: white;
+}
+
+body,
+input,
+button {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  border: none;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 1rem;
+    background: rgba(84, 84, 84, .2);
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+li:hover {
+    background: rgba(51, 51, 51, .1);
+}
+
+p{
+    margin-top: 10px;
+    opacity: .6;
+}
+
+h3 {
+    color: rgb(247, 244, 62);
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.container {
+  margin: 5% auto;
+  max-width: 100%;
+  width: 600px;
+  position: relative;
+}
+
+
+.addItem {
+    max-width: 100%;
+    width: 400px;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    padding: 1rem;
+    background: rgba(84, 84, 84, .2);
+    border-radius: 10px 10px 0px 0px;
+    cursor: pointer;
+}
+
+.addItem input {
+    background: transparent;
+    font-size: 20px;
+    color: white;
+}
+
+.addItem input::placeholder {
+    color: rgb(247, 244, 62);
+}
+
+.checkBox {
+    position: relative;
+    padding: 5px;
+    margin-right: 1rem;
+}
+
+.checkBox .round {
+    border: 2px solid white;
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+}
+
+.checkBox .checkMark {
+    display: none;
+    z-index: -1;
+}
+
+.checkBox .checkMark.active {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 20px;
+    left: 10px;
+    top: 10px;
+    position: absolute;
+}
+
+.addItem button {
+    background: transparent;
+    cursor: pointer;
+}
+
+li.marked::before {
+    transition: width 2s linear;
+    content: '';
+    background-color: white;
+    width: calc(600px - (2 * 1rem));
+    height: 2px;
+    position: absolute;
+    opacity: .7;
+}
+
+li.done {
+    display: none;
+    transition: 2s linear;
+}
